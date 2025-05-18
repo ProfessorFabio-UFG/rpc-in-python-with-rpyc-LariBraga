@@ -8,6 +8,6 @@ class Client:
   #conn.root.exposed_append(6)       # and append two elements
   #print (conn.root.exposed_value())   # Print the result
 
-  print(conn.root.sum(2,7))
-  print(conn.root.sum(6,9))
-  print(conn.root.sum(8,4))
+  print(conn.sum(2,7))
+  print(conn.sub(6,9))
+  print(conn.mult(8,4))
