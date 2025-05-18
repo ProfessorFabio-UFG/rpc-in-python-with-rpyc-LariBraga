@@ -1,7 +1,7 @@
 import rpyc
 from constRPYC import * #-
 from rpyc.utils.server import ThreadedServer
-
+"""
 class DBList(rpyc.Service):
   value = []
 
@@ -11,7 +11,7 @@ class DBList(rpyc.Service):
 
   def exposed_value(self):
     return self.value
-  
+"""
 class Operations(rpyc.Service):
     resp = ""
 
@@ -31,4 +31,3 @@ if __name__ == "__main__":
   #server = ThreadedServer(DBList(), port = PORT)
   server = ThreadedServer(Operations(), port = PORT)
   server.start()
-
