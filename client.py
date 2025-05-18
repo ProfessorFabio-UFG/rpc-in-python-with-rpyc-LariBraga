@@ -3,7 +3,11 @@ from constRPYC import * #-
 
 class Client:
   conn = rpyc.connect(SERVER, PORT) # Connect to the server
-  print (conn.root.exposed_value())
-  conn.root.exposed_append(5)       # Call an exposed operation,
-  conn.root.exposed_append(6)       # and append two elements
-  print (conn.root.exposed_value())   # Print the result
+  #print (conn.root.exposed_value())
+  #conn.root.exposed_append(5)       # Call an exposed operation,
+  #conn.root.exposed_append(6)       # and append two elements
+  #print (conn.root.exposed_value())   # Print the result
+
+  print("2 + 7 = " + conn.root.sum(2,7))
+  print("6 - 9 = " + conn.root.sum(6,9))
+  print("8 * 4 = " + conn.root.sum(8,4))
