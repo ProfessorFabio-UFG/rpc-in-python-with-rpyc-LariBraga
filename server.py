@@ -13,15 +13,19 @@ class DBList(rpyc.Service):
     return self.value
   
 class Operations(rpyc.Service):
+    resp = ""
 
-    def sum(num1, num2):
-        return num1 + num2
+    def sum(self, num1, num2):
+      self.resp = str(num1) + " + " + str(num2) + " = " + str(num1+num2)
+      return self.resp
     
-    def sub(num1, num2):
-       return num1 - num2
+    def sub(self, num1, num2):
+      self.resp = str(num1) + " - " + str(num2) + " = " + str(num1-num2)
+      return self.resp
     
-    def mult(num1, num2):
-       return num1 * num2
+    def mult(self, num1, num2):
+      self.resp = str(num1) + " * " + str(num2) + " = " + str(num1*num2)
+      return self.resp
 
 if __name__ == "__main__":
   #server = ThreadedServer(DBList(), port = PORT)
